@@ -1,0 +1,165 @@
+.image-card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  min-width: 300px;
+  aspect-ratio: 260 / 220;
+  transition: transform 0.3s;
+  background-color: white;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.price-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px; /* Width of the triangle */
+  height: 70px; /* Height of the triangle */
+  z-index: 2; /* Ensures it is above the white triangle */
+}
+
+.price-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 70px 70px 0 0; /* White triangle */
+  border-color: white transparent transparent transparent;
+  z-index: 1;
+}
+
+.price-tag span {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 11px;
+  font-weight: normal;
+  color: black;
+  z-index: 2;
+}
+
+.info {
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box; 
+  border: 1px solid #e3e3e3;
+  background-color: white;
+}
+
+.price-currency{
+  font-size: 0.8rem;
+  margin-left: 0.25em;
+}
+
+.title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+}
+
+.author {
+  color: #888;
+  padding-bottom: 10px;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.author-name {
+  color: black;
+}
+
+.actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.3s;
+  top: 45%;
+}
+
+.image-card:hover .actions {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 5px 0;
+}
+
+.action-button img {
+  width: 15px;
+  height: 15px;
+  padding-bottom: 5px;
+}
+
+.action-count {
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+}
+
+.actions-mobile {
+  display: none;
+}
+
+.actions-mobile .action-button {
+  cursor: pointer;
+}
+
+
+@media (max-width: 680px) {
+  .actions {
+    display: none;
+  }
+
+  .info {
+    padding: 0;
+  }
+
+  .actions-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    background-color: white;
+    border-top: 1px solid #e3e3e3;
+  }
+
+  .action-count {
+    font-size: 1rem;
+    color: black;
+  }
+
+  .action-button {
+    flex-direction: row;
+    margin: 0;
+    padding: 10px;
+  }
+  .action-button:first-child {
+    border-right: 1px solid #e3e3e3; 
+    padding-right: 10px; 
+  }
+
+  .action-button img{
+    padding: 0 5px;
+  }
+
+  .title {
+    padding-top: 10px;
+  }
+}

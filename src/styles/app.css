@@ -1,0 +1,11 @@
+.centered-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 30vh;
+  color: #666;
+  background-color: #f6f6f6;
+}
