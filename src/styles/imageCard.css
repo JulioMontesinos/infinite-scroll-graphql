@@ -1,7 +1,7 @@
 .image-card {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   min-width: 300px;
   aspect-ratio: 260 / 220;
   transition: transform 0.3s;
