@@ -2,6 +2,8 @@
 
 This project is an image gallery application with infinite scroll functionality. It uses a custom GraphQL API that I created, hosted in the repository [GraphQL-API-for-Image-Management](https://github.com/JulioMontesinos/GraphQL-API-for-Image-Management).
 
+Production URL: [infinite-scroll-graphql.vercel.app](https://infinite-scroll-graphql.vercel.app/)
+
 ## How to Run the Project
 
 Follow these steps to set up and run the project:
